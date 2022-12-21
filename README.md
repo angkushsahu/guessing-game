@@ -1,46 +1,59 @@
-# Getting Started with Create React App
+# Guessing The Number
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+(A quick game tutorial)
 
-## Available Scripts
+Guess the number is a logic based number guessing game where you can set a range of numbers and the system will generate a number within that range, also it will set the minimum number of moves you will need to guess the number.
 
-In the project directory, you can run:
+You have to guess the number in the given number of moves. You will be hinted if your guess is smaller, larger or equal to the required number.
 
-### `npm start`
+### Visit :- [Guess The Number](https://guessthenumber.netlify.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tech Stack
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![Tech Stack](https://skillicons.dev/icons?i=ts,react,netlify&theme=dark)
 
-### `npm test`
+Typescript - React - Netlify
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Install
 
-### `npm run build`
+Download the code of this project or clone it to your machine
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To clone this repository, use the following command
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/angkushsahu/guessing-game.git
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+After you get your copy, hit the command below to install all the dependencies that you will need for this project
 
-### `npm run eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Now you can successfully run the project locally by hitting the command below
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm run dev
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## About the Developer
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Hey, this is Angkush
 
-## Learn More
+Contact Me from [here](https://angkush.vercel.app#contact)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<a href="https://angkush.vercel.app/" rel="noopener noreferrer" target="_blank">
+  <img src="https://img.shields.io/badge/my_portfolio-teal?style=for-the-badge&logo=ko-fi&logoColor=white" alt="portfolio" />
+</a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<a href="https://linkedin.com/in/angkush-sahu-0409311bb" rel="noopener noreferrer" target="_blank">
+  <img src="https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="portfolio" />
+</a>
+
+<a href="https://angkush.vercel.app#contact" rel="noopener noreferrer" target="_blank">
+  <img src="https://img.shields.io/badge/Mail-red?style=for-the-badge&logo=gmail&logoColor=white" alt="portfolio" />
+</a>
+
+<a href="https://github.com/angkushsahu" rel="noopener noreferrer" target="_blank">
+  <img src="https://img.shields.io/badge/Github-gray?style=for-the-badge&logo=github&logoColor=white" alt="portfolio" />
+</a>
