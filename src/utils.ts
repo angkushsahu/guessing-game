@@ -77,7 +77,6 @@ export const checkGuess = (args: CheckGuessArgs) => {
 	const { e, attempts, maxAttempts, status, randomNumber, guess, setAttempts, setStatus, setGuess } = args;
 
 	e.preventDefault();
-	console.log(`Status: ${status}, Attempts: ${attempts}, Max Attempts: ${maxAttempts}, Random Number: ${randomNumber}`);
 
 	if (attempts === maxAttempts - 1) {
 		setStatus(randomNumber === guess ? "success" : "failed");
