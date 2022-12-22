@@ -14,8 +14,6 @@ html {
 *::after,
 *::before {
     box-sizing: border-box;
-    border: none;
-    outline: none;
 }
 
 body {
@@ -44,4 +42,15 @@ input {
 
 :focus:not(:focus-visible) {
     outline: none;
+}
+
+.root {
+    background-color: #252525;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.error {
+    color: #ff0000;
 }

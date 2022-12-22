@@ -1,9 +1,21 @@
+import { useState } from "react";
+import { Limits, PlayGame } from "components";
+
 const App = () => {
-    return (
-        <main>
-            <h1>Guess The Number</h1>
-        </main>
-    );
+	const [areLimitsSet, setAreLimitsSet] = useState(false);
+	const [maxAttempts, setMaxAttempts] = useState(0);
+	const [randomNumber, setRandomNumber] = useState(0);
+
+	return (
+		<main className="root">
+			<h1>Guess The Number</h1>
+			{!areLimitsSet ? (
+				<Limits setAreLimitsSet={setAreLimitsSet} setMaxAttempts={setMaxAttempts} setRandomNumber={setRandomNumber} />
+			) : (
+				<PlayGame maxAttempts={maxAttempts} randomNumber={randomNumber} />
+			)}
+		</main>
+	);
 };
 
 export default App;
