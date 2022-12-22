@@ -1,4 +1,4 @@
-# Guessing The Number
+# Number Clue
 
 (A quick game tutorial)
 
@@ -6,7 +6,7 @@ Guess the number is a logic based number guessing game where you can set a range
 
 You have to guess the number in the given number of moves. You will be hinted if your guess is smaller, larger or equal to the required number.
 
-### Visit :- [Guess The Number](https://guessthenumber.netlify.app/)
+### Visit :- [Guess The Number](https://numberclue.netlify.app/)
 
 ## Tech Stack
 
