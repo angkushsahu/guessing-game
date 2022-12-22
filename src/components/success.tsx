@@ -2,8 +2,8 @@ import ReloadGame from "./reloadGame";
 
 const Success = () => {
 	return (
-		<section>
-			<h1>Hurrah 🥳, you succeeded</h1>
+		<section className="success">
+			<h2>Hurrah 🥳, you succeeded</h2>
 			<ReloadGame />
 		</section>
 	);

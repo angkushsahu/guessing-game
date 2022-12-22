@@ -2,8 +2,8 @@ import ReloadGame from "./reloadGame";
 
 const Failed = () => {
 	return (
-		<section>
-			<h1>Sorry, you exhausted your max attempts 😢</h1>
+		<section className="failed">
+			<h2>Sorry, you exhausted your max attempts 😢</h2>
 			<ReloadGame />
 		</section>
 	);

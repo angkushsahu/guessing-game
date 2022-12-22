@@ -59,7 +59,9 @@ export const updateGuess = (e: ChangeEvent<HTMLInputElement>, setGuess: Dispatch
 };
 
 export const setLimits = (args: SetLimitArgs) => {
-	const { upperLimit, lowerLimit, setIncorrectLimits, setAreLimitsSet, setRandomNumber, setMaxAttempts } = args;
+	const { e, upperLimit, lowerLimit, setIncorrectLimits, setAreLimitsSet, setRandomNumber, setMaxAttempts } = args;
+
+	e.preventDefault();
 
 	if (upperLimit - lowerLimit < 100) {
 		setIncorrectLimits(true);

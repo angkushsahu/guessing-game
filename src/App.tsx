@@ -8,7 +8,7 @@ const App = () => {
 
 	return (
 		<main className="root">
-			<h1>Guess The Number</h1>
+			<h1 className="root-heading">Guess The Number</h1>
 			{!areLimitsSet ? (
 				<Limits setAreLimitsSet={setAreLimitsSet} setMaxAttempts={setMaxAttempts} setRandomNumber={setRandomNumber} />
 			) : (

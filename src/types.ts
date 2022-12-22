@@ -3,6 +3,7 @@ import { Dispatch, FormEvent, SetStateAction } from "react";
 export type StatusType = "playing" | "failed" | "success";
 
 export type SetLimitArgs = {
+	e: FormEvent;
 	upperLimit: number;
 	lowerLimit: number;
 	setIncorrectLimits: Dispatch<SetStateAction<boolean>>;

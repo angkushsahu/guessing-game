@@ -1,0 +1,88 @@
+.text-green {
+	color: var(--success-color);
+}
+
+.play-game {
+	display: flex;
+	justify-content: center;
+	gap: 6rem;
+	margin-top: 4rem;
+}
+
+.play-game > div,
+.play-game > form {
+	max-width: 60rem;
+	width: 100%;
+}
+
+.play-game > form > .input-container {
+	width: 100%;
+}
+
+.play-game > form > button {
+	margin: 2rem 0;
+	width: 100%;
+}
+
+.play-game > form > h3 {
+	text-align: center;
+}
+
+.attempts-board {
+	min-height: 25rem;
+	height: 100%;
+	padding: 2rem;
+	border-radius: 1rem;
+	box-shadow: var(--shadow);
+	flex: 1;
+	background-color: var(--secondary-color);
+}
+
+.attempts-board--heading {
+	margin: 0;
+}
+
+.attempts {
+	margin: 2rem 0;
+}
+
+.attempts > p {
+	margin: 0.5rem;
+}
+
+.attempts > p > span.strong {
+	font-weight: 700;
+}
+
+.attempts > p > span.lighten {
+	color: var(--foreground-secondary-color);
+	font-size: 1.4rem;
+}
+
+.success,
+.failed {
+	height: 80vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.success > h2,
+.failed > h2 {
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 87em) {
+	.play-game {
+		gap: 3rem;
+	}
+}
+
+@media screen and (max-width: 75em) {
+	.play-game {
+		flex-direction: column;
+		align-items: center;
+	}
+}
