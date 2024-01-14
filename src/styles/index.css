@@ -58,6 +58,10 @@ input {
 	outline: none;
 }
 
+.margin-top {
+	margin-top: 2rem;
+}
+
 .root {
 	background-color: var(--primary-color);
 	color: var(--foreground-color);
@@ -89,7 +93,7 @@ button {
 	border-radius: 1rem;
 	padding: 1rem;
 	box-shadow: var(--shadow);
-	width: 30rem;
+	width: 100%;
 	cursor: pointer;
 }
 

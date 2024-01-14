@@ -1,36 +1,21 @@
-import { Dispatch, FormEvent, SetStateAction } from "react";
+import type { Dispatch, SetStateAction } from "react";
 
 export type StatusType = "playing" | "failed" | "success";
 
-export type SetLimitArgs = {
-	e: FormEvent;
+export interface SetLimitArgs {
 	upperLimit: number;
 	lowerLimit: number;
-	setIncorrectLimits: Dispatch<SetStateAction<boolean>>;
-	setAreLimitsSet: Dispatch<SetStateAction<boolean>>;
-	setRandomNumber: Dispatch<SetStateAction<number>>;
 	setMaxAttempts: Dispatch<SetStateAction<number>>;
-};
+	setRandomNumber: Dispatch<SetStateAction<number>>;
+	setAreLimitsSet: Dispatch<SetStateAction<boolean>>;
+}
 
-export type CheckGuessArgs = {
-	e: FormEvent;
+export interface CheckGuessArgs {
 	attempts: number;
 	maxAttempts: number;
 	status: StatusType;
 	randomNumber: number;
 	guess: number;
-	setAttempts: Dispatch<React.SetStateAction<string[]>>;
+	setAttempts: Dispatch<React.SetStateAction<Array<string>>>;
 	setStatus: Dispatch<React.SetStateAction<StatusType>>;
-	setGuess: Dispatch<React.SetStateAction<number>>;
-};
-
-export type LimitProps = {
-	setAreLimitsSet: Dispatch<SetStateAction<boolean>>;
-	setRandomNumber: Dispatch<SetStateAction<number>>;
-	setMaxAttempts: Dispatch<SetStateAction<number>>;
-};
-
-export type PlayGameProps = {
-	maxAttempts: number;
-	randomNumber: number;
-};
+}

@@ -1,4 +1,4 @@
-const ReloadGame = () => {
+export default function ReloadGame() {
 	const reload = () => {
 		window.location.reload();
 	};
@@ -8,6 +8,4 @@ const ReloadGame = () => {
 			Reload game
 		</button>
 	);
-};
-
-export default ReloadGame;
+}

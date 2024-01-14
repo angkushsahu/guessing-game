@@ -2,7 +2,8 @@
 	padding: 3rem;
 	border-radius: 1rem;
 	box-shadow: 4px 4px 20px -5px #000000;
-	width: fit-content;
+	max-width: 45rem;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -14,12 +15,10 @@
 .limits-fieldset--form > div {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	gap: 2rem;
 }
 
 .limits-fieldset--form .input-container {
-	width: 35rem;
+	width: 100%;
 }
 
 .limits-fieldset--form > button {
@@ -28,7 +27,8 @@
 }
 
 .limits-fieldset--error {
-	text-align: center;
+	font-size: 1.4rem;
+	margin: 0.5rem 0 0;
 }
 
 .limits-fieldset--button:hover {

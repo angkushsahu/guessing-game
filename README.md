@@ -40,7 +40,7 @@ npm run dev
 
 ### Hey, this is Angkush
 
-Contact Me from [here](https://angkush.vercel.app#contact)
+Contact Me from [here](https://angkush.vercel.app/contact)
 
 <a href="https://angkush.vercel.app/" rel="noopener noreferrer" target="_blank">
   <img src="https://img.shields.io/badge/my_portfolio-teal?style=for-the-badge&logo=ko-fi&logoColor=white" alt="portfolio" />
@@ -50,7 +50,7 @@ Contact Me from [here](https://angkush.vercel.app#contact)
   <img src="https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="portfolio" />
 </a>
 
-<a href="https://angkush.vercel.app#contact" rel="noopener noreferrer" target="_blank">
+<a href="https://angkush.vercel.app/contact" rel="noopener noreferrer" target="_blank">
   <img src="https://img.shields.io/badge/Mail-red?style=for-the-badge&logo=gmail&logoColor=white" alt="portfolio" />
 </a>
 

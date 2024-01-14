@@ -1,10 +1,10 @@
-import { useState } from "react";
 import { Limits, PlayGame } from "components";
+import { useState } from "react";
 
-const App = () => {
+export default function App() {
 	const [areLimitsSet, setAreLimitsSet] = useState(false);
-	const [maxAttempts, setMaxAttempts] = useState(0);
 	const [randomNumber, setRandomNumber] = useState(0);
+	const [maxAttempts, setMaxAttempts] = useState(0);
 
 	return (
 		<main className="root">
@@ -16,6 +16,4 @@ const App = () => {
 			)}
 		</main>
 	);
-};
-
-export default App;
+}

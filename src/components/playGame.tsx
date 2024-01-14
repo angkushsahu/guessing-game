@@ -1,49 +1,54 @@
 import "styles/play.css";
-import { FormEvent, useEffect, useRef, useState } from "react";
-import { PlayGameProps, StatusType } from "types";
-import { checkGuess, updateGuess } from "utils";
-import Failed from "./failed";
+
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { useState } from "react";
+import { z } from "zod";
+
+import type { StatusType } from "types";
+import { checkGuess } from "utils";
 import Success from "./success";
+import Failed from "./failed";
 
-const PlayGame = (props: PlayGameProps) => {
-	const { maxAttempts, randomNumber } = props;
+export interface PlayGameProps {
+	maxAttempts: number;
+	randomNumber: number;
+}
 
-	const [attempts, setAttempts] = useState<string[]>([]);
-	const [guess, setGuess] = useState(0);
+const playGameSchema = z.object({
+	guess: z.coerce.number().min(1, { message: "Guess a number" }),
+});
+
+export type PlayGameType = z.infer<typeof playGameSchema>;
+
+export default function PlayGame({ maxAttempts, randomNumber }: PlayGameProps) {
+	const [attempts, setAttempts] = useState<Array<string>>([]);
 	const [status, setStatus] = useState<StatusType>("playing");
 
-	const guessRef = useRef<HTMLInputElement>(null);
+	const playGameForm = useForm<PlayGameType>({ resolver: zodResolver(playGameSchema) });
 
-	const checkGuessWrapper = (e: FormEvent) => {
-		const args = { e, attempts: attempts.length, guess, maxAttempts, randomNumber, setAttempts, setGuess, setStatus, status };
+	function checkGuessWrapper(values: PlayGameType) {
+		const args = { attempts: attempts.length, ...values, maxAttempts, randomNumber, setAttempts, setStatus, status };
 		checkGuess(args);
-	};
+		playGameForm.reset();
+	}
 
-	const focusOnInput = () => {
-		guessRef.current?.focus();
-	};
-
-	useEffect(() => {
-		focusOnInput();
-	}, []);
+	function focusOnInput() {
+		playGameForm.setFocus("guess");
+	}
 
 	return (
 		<>
 			{status === "playing" ? (
 				<section className="play-game">
-					<form onSubmit={checkGuessWrapper}>
+					<form onSubmit={playGameForm.handleSubmit(checkGuessWrapper)}>
 						<div className="input-container" onClick={focusOnInput}>
 							<label htmlFor="guess">Enter your guess</label>
-							<input
-								type="text"
-								name="guess"
-								id="guess"
-								placeholder="Enter your guess ...."
-								value={guess}
-								onChange={(e) => updateGuess(e, setGuess)}
-								ref={guessRef}
-							/>
+							<input id="guess" type="text" placeholder="Enter your guess ...." {...playGameForm.register("guess")} autoFocus />
 						</div>
+						{playGameForm.formState.errors.guess ? (
+							<p className="limits-fieldset--error error">{playGameForm.formState.errors.guess.message}</p>
+						) : null}
 						<button type="submit">Check</button>
 						<h3>Attempts : {attempts.length}</h3>
 						<h3 className="text-green">Max Attempts : {maxAttempts}</h3>
@@ -70,6 +75,4 @@ const PlayGame = (props: PlayGameProps) => {
 			)}
 		</>
 	);
-};
-
-export default PlayGame;
+}
