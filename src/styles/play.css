@@ -74,6 +74,15 @@
 	margin-bottom: 4rem;
 }
 
+.failed > h2 {
+	margin-bottom: 0rem;
+}
+
+.failed > h3 {
+	font-size: 3rem;
+	margin: 1.5rem 0 3rem;
+}
+
 @media screen and (max-width: 87em) {
 	.play-game {
 		gap: 3rem;

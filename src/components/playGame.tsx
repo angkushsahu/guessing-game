@@ -71,7 +71,7 @@ export default function PlayGame({ maxAttempts, randomNumber }: PlayGameProps) {
 			) : status === "success" ? (
 				<Success />
 			) : (
-				<Failed />
+				<Failed randomNumber={randomNumber} />
 			)}
 		</>
 	);
